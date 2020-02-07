@@ -1,0 +1,96 @@
+.promo {
+  padding: 0 15px;
+}
+
+.promo-wrapper {
+  margin: 0 auto;
+  padding: 175px 0 179px;
+  max-width: $desktop-width;
+  background-image: url("../img/penguin@1x.jpg");
+  background-size: 560px;
+  background-position: left calc(50% + 300px) center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo-wrapper {
+    background-image: url("../img/penguin@2x.jpg.jpg");
+  }
+}
+
+.promo__content {
+  max-width: 512px;
+}
+
+.promo__content h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.promo__content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: $laptop-width) {
+  .promo {
+    padding: 0 45px;
+  }
+
+  .promo-wrapper {
+    margin: 0 auto;
+    padding: 90px 0 93px;
+    background-image: url("../img/penguin-lap@1x.jpg");
+    background-size: 324px;
+    background-position: left calc(50% + 178px) center;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .promo-wrapper {
+      background-image: url("../img/penguin-lap@2x.jpg.jpg");
+    }
+  }
+
+  .promo__content {
+    max-width: 324px;
+  }
+
+  .promo__content h2 {
+    margin-bottom: 17px;
+    font-size: 26px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding: 0 15px;
+  }
+
+  .promo-wrapper {
+    margin: 0 auto;
+    padding: 58px 0 283px;
+    background-image: url("../img/penguin-mob@1x.jpg");
+    background-size: 290px;
+    background-position: center bottom 65px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .promo-wrapper {
+      background-image: url("../img/penguin-mob@2x.jpg.jpg");
+    }
+  }
+
+  .promo__content {
+    max-width: 100%;
+  }
+
+  .promo__content h2 {
+    font-size: 24px;
+  }
+}
