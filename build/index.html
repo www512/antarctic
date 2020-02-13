@@ -11,31 +11,30 @@
   <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-600.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
   <header class="header header__on">
     <div class="header-wrapper">
       <div class="header-menu">
-        <a class="logo" href="index.html">
-          <svg class="logo__image-on" width="70" height="38">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-        </a>
+        <svg class="header__image-on" width="70" height="38">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
         <button class="header__toggle-on" type="button" id="toggle-button" aria-label="Меню"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="header-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Преимущества</a>
-          </li>
-          <li class="navigation-item direction">
-            <a class="navigation-link" href="#">Направления</a>
+            <a class="navigation-link" href="#advantage">Преимущества</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Ближайшие круизы</a>
+            <a class="navigation-link" href="#promo">Направления</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="navigation-link" href="#cruise">Ближайшие круизы</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#contact">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -48,7 +47,7 @@
         <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
       </div>
     </div>
-    <section class="promo">
+    <section class="promo" id="promo">
       <div class="promo-wrapper">
         <div class="promo__content">
           <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
@@ -56,7 +55,7 @@
         </div>
       </div>
     </section>
-    <section class="advantage">
+    <section class="advantage" id="advantage">
       <div class="advantage-wrapper">
         <h2>Преимущества</h2>
         <ul class="advantage-list">
@@ -75,12 +74,12 @@
         </ul>
       </div>
     </section>
-    <section class="cruise">
+    <section class="cruise" id="cruise">
       <div class="cruise-wrapper">
         <h2>Ближайшие круизы</h2>
         <ul class="cruise-list">
           <li class="cruise-item">
-            <div class="cruise-link cruise-astoria">
+            <div class="cruise-link cruise-astoria" onclick="">
               <h3>Круиз “Астория”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -106,7 +105,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-elain">
+            <div class="cruise-link cruise-elain" onclick="">
               <h3>Круиз “Элайн”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -132,7 +131,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-atlantis">
+            <div class="cruise-link cruise-atlantis" onclick="">
               <h3>Круиз “Атлантис”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -158,7 +157,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-odyssey">
+            <div class="cruise-link cruise-odyssey" onclick="">
               <h3>Круиз “Одиссей”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -184,7 +183,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-olimpia">
+            <div class="cruise-link cruise-olimpia" onclick="">
               <h3>Круиз “Олимпия”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -210,7 +209,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-avrora">
+            <div class="cruise-link cruise-avrora" onclick="">
               <h3>Круиз “Аврора”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -236,7 +235,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-leonor">
+            <div class="cruise-link cruise-leonor" onclick="">
               <h3>Круиз “Леонор”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -262,7 +261,7 @@
             </div>
           </li>
           <li class="cruise-item">
-            <div class="cruise-link cruise-minion">
+            <div class="cruise-link cruise-minion" onclick="">
               <h3>Круиз “Минион - 1”</h3>
               <div class="cruise-link__cover">
                 <ul class="cruise-link__list">
@@ -294,25 +293,29 @@
       <div class="reservation-wrapper">
         <div class="reservation-content">
           <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          <p>Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
         </div>
         <form class="reservation-form" action="/echo" method="get">
           <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
           <label class="visually-hidden" for="name">Имя</label>
           <input class="reservation-input" type="text" name="name" id="name" placeholder="Валерия" required="">
           <label class="visually-hidden" for="phone">Телефон</label>
-          <input class="reservation-input" type="tel" name="phone" id="phone" placeholder="89236889975" required="">
+          <input class="reservation-input" type="tel" pattern="[0-9]{11}" name="phone" id="phone" placeholder="89236889975" required="">
           <label class="visually-hidden" for="email">Почта</label>
           <input class="reservation-input" type="email" name="email" id="email" placeholder="grishaewa.lera@gmail.com" required="">
-          <input class="reservation-input-checkbox visually-hidden" type="checkbox" name="data" id="data" checked="" required="">
-          <label class="reservation-checkbox" for="data">Я согласен на обработку моих персональных данных</label>
+          <div class="reservation-input-wrapper">
+            <input class="reservation-input-checkbox visually-hidden" type="checkbox" name="data" id="data" checked="" required="">
+            <label class="reservation-checkbox" for="data">Я согласен на обработку моих персональных данных</label>
+          </div>
           <button class="reservation-button" type="submit">Оставить заявку</button>
         </form>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="contact-wrapper">
-        <iframe class="contact-map" src="https://yandex.ru/map-widget/v1/-/CKQCuLKB" width="560" height="306" frameborder="0" allowfullscreen="true"></iframe>
+        <div id="map" class="contact-map">
+        </div>
         <div class="contact-content">
           <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
           <ul class="contact-list">
@@ -320,7 +323,7 @@
               г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8
             </li>
             <li class="contact-item contact-icon-phone">
-              8-800-200-00-00
+              <a class="contact-phone" href="tel:88002000000">8-800-200-00-00</a>
             </li>
           </ul>
         </div>
@@ -329,42 +332,40 @@
   </main>
   <footer class="footer">
     <div class="footer-wrapper">
-      <a class="logo" href="index.html">
-        <svg class="logo-image" width="70" height="38">
-          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-        </svg>
-      </a>
+      <svg class="logo-image" width="70" height="38">
+        <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+      </svg>
       <ul class="footer-list">
         <li class="footer-item">
-          <a class="footer-link" href="#">Преимущества</a>
+          <a class="footer-link" href="#advantage">Преимущества</a>
         </li>
         <li class="footer-item">
-          <a class="footer-link" href="#">Направления</a>
+          <a class="footer-link" href="#promo">Направления</a>
         </li>
         <li class="footer-item">
-          <a class="footer-link" href="#">Ближайшие круизы</a>
+          <a class="footer-link" href="#cruise">Ближайшие круизы</a>
         </li>
         <li class="footer-item">
-          <a class="footer-link" href="#">Контакты</a>
+          <a class="footer-link" href="#contact">Контакты</a>
         </li>
       </ul>
       <ul class="social-list">
         <li class="social-item">
-          <a href="https://www.facebook.com/" aria-label="Facebook">
+          <a class="social-link" href="https://www.facebook.com/" aria-label="Facebook">
             <svg class="social-icon social-icon__facebook" width="11" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social-item">
-          <a href="https://www.instagram.com/" aria-label="Instagram">
+          <a class="social-link" href="https://www.instagram.com/" aria-label="Instagram">
             <svg class="social-icon social-icon__instagram" width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social-item">
-          <a href="https://twitter.com/" aria-label="Twitter">
+          <a class="social-link" href="https://twitter.com/" aria-label="Twitter">
             <svg class="social-icon social-icon__twitter" width="20" height="16">
               <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
             </svg>
@@ -373,7 +374,9 @@
       </ul>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>
